@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace Arquivo
@@ -24,21 +24,15 @@ namespace Arquivo
                 string ano = lines[2];
                 using (StreamWriter sw = File.AppendText(arquivo2))
                 {
-                    sw.Write(mes + "/");
-                    sw.Write(dia + "/");
-                    sw.WriteLine(ano);
+                    sw.Write(mes + "/" + dia + "/" + ano);
                 }
                 using (StreamWriter sw = File.AppendText(arquivo3))
                 {
-                    sw.Write(ano + "/");
-                    sw.Write(mes + "/");
-                    sw.WriteLine(dia);
+                    sw.Write(ano + "/" + mes + "/" + dia);
                 }
                 using (StreamWriter sw = File.AppendText(arquivo4))
                 {
-                    sw.Write(dia + "-");
-                    sw.Write(mes + "-");
-                    sw.Write(ano);
+                    sw.Write(dia + "-" + mes + "-" + ano);
                 }
             }
             catch (IOException e)
